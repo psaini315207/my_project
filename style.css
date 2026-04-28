@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Wallpaper Background */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1503264116251-35a269479413') no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Sections */
+.section {
+  padding: 50px;
+  text-align: center;
+  background: #111;
+}
+
+.card {
+  background: #222;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* Button */
+button {
+  padding: 10px 20px;
+  border: none;
+  background: orange;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
