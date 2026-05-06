@@ -9,69 +9,42 @@
 }
 
 /* Navbar */
- nav {
+  nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
 }
 
+/* RIGHT SIDE MENU */
 .nav-links {
-  display: flex;
+  display: flex !important;
   list-style: none;
-  gap: 20px;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links a {
+/* LINKS STYLE */
+.nav-links li a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
-/* Logo */
+
+.nav-links li a:hover {
+  color: #38bdf8;
+  text-shadow: 0 0 10px #38bdf8;
+}
+
+/* LOGO */
 .logo {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
   color: #38bdf8;
-  text-shadow: 0 0 15px #38bdf8;
+  text-shadow: 0 0 10px #38bdf8;
 }
-
-/* Sections */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-/* Cards */
-.project-container, .service-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.card, .service-card {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-}
-
-/* Skills */
-.skill {
-  width: 300px;
-  margin: 10px auto;
-}
-
-.bar {
-  background: #222;
-  border-radius: 10px;
-}
-
-.bar span {
-  display: block;
-  height: 10px;
-  background: #38bdf8;
-}
-
 /* WhatsApp */
 .whatsapp {
   position: fixed;
