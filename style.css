@@ -1,15 +1,16 @@
- body {
-  margin: 0 !important;
+ body  body {
+  margin: 0;
   font-family: 'Poppins', sans-serif;
-  color: white !important;
+  color: white;
 
-  background: linear-gradient(-45deg, #020617, #1e3a8a, #0ea5e9, #ff0000) !important;
-  background-size: 500% 500% !important;
-  animation: bg 6s ease infinite !important;
+  background: linear-gradient(-45deg, #020617, #1e3a8a, #0ea5e9, #ff0000);
+  background-size: 500% 500%;
+  animation: bg 6s ease infinite;
 }
 
 /* Navbar */
-  nav {
+   nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
