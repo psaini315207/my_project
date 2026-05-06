@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Prince Saini Portfolio</title>
+<title>Prince Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
 <style>
 
+/* ===== BODY ===== */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -24,7 +25,7 @@ body {
   100% {background-position:0% 50%;}
 }
 
-/* NAV */
+/* ===== NAV ===== */
 nav {
   display:flex;
   justify-content:space-between;
@@ -49,34 +50,29 @@ nav {
   text-decoration:none;
 }
 
-/* SECTIONS */
+/* ===== SECTION ===== */
 .section {
   padding:60px;
   text-align:center;
 }
 
-/* CARDS */
+/* ===== BOXES ===== */
 .container {
   display:flex;
-  flex-wrap:wrap;
   justify-content:center;
+  flex-wrap:wrap;
   gap:20px;
 }
 
 .card {
   background:rgba(255,255,255,0.1);
   padding:20px;
-  border-radius:12px;
-  width:220px;
+  width:200px;
+  border-radius:10px;
   backdrop-filter:blur(10px);
-  transition:0.3s;
 }
 
-.card:hover {
-  transform:scale(1.1);
-}
-
-/* SKILLS */
+/* ===== SKILL BAR ===== */
 .skill {
   width:300px;
   margin:10px auto;
@@ -94,27 +90,7 @@ nav {
   background:#38bdf8;
 }
 
-/* CONTACT BOX */
-input, textarea {
-  width:250px;
-  padding:10px;
-  margin:5px;
-  border:none;
-  border-radius:5px;
-}
-
-/* TRAIL */
-.trail {
-  position:fixed;
-  width:10px;
-  height:10px;
-  background:#38bdf8;
-  border-radius:50%;
-  pointer-events:none;
-  z-index:9999;
-}
-
-/* WHATSAPP */
+/* ===== WHATSAPP ===== */
 .whatsapp {
   position:fixed;
   bottom:20px;
@@ -122,8 +98,18 @@ input, textarea {
   background:#25D366;
   padding:15px;
   border-radius:50%;
-  color:white;
   text-decoration:none;
+  color:white;
+}
+
+/* ===== TRAIL ===== */
+.trail {
+  position:fixed;
+  width:10px;
+  height:10px;
+  background:#38bdf8;
+  border-radius:50%;
+  pointer-events:none;
 }
 
 </style>
@@ -136,7 +122,6 @@ input, textarea {
   <div class="logo">⚡ Prince.dev</div>
 
   <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -145,7 +130,7 @@ input, textarea {
 </nav>
 
 <!-- HERO -->
-<section class="section" id="home">
+<section class="section">
   <h1>I’m <span style="color:#38bdf8;">Prince Saini</span></h1>
   <p>BCA Student | DevOps Learner</p>
 </section>
@@ -153,8 +138,8 @@ input, textarea {
 <!-- EDUCATION -->
 <section class="section" id="education">
   <h2>Education 🎓</h2>
-  <p>✔ 1 Year Diploma Completed in Computer Applications</p>
-  <p>✔ BCA Student (Running)</p>
+  <p>✔ 1 Year Diploma Completed</p>
+  <p>✔ BCA Running</p>
 </section>
 
 <!-- SERVICES -->
@@ -162,10 +147,10 @@ input, textarea {
   <h2>Services 💼</h2>
 
   <div class="container">
-    <div class="card">📄 Data Entry</div>
-    <div class="card">⌨️ Typing Work</div>
-    <div class="card">📊 Data Management</div>
-    <div class="card">💻 Web Design</div>
+    <div class="card">Data Entry</div>
+    <div class="card">Typing Work</div>
+    <div class="card">Data Management</div>
+    <div class="card">Web Design</div>
   </div>
 </section>
 
@@ -184,34 +169,30 @@ input, textarea {
   </div>
 
   <div class="skill">
-    <p>Git & GitHub</p>
-    <div class="bar"><span style="width:75%"></span></div>
+    <p>Git</p>
+    <div class="bar"><span style="width:70%"></span></div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="section" id="contact">
   <h2>Contact 📩</h2>
-
-  <input placeholder="Your Name"><br>
-  <input placeholder="Your Email"><br>
-  <textarea placeholder="Message"></textarea>
+  <p>Email: prince@example.com</p>
 </section>
 
 <!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">💬</a>
 
-<!-- MOUSE TRAIL -->
+<!-- TRAIL -->
 <script>
 document.addEventListener("mousemove", e => {
   let dot = document.createElement("div");
   dot.className = "trail";
   dot.style.left = e.clientX + "px";
   dot.style.top = e.clientY + "px";
-
   document.body.appendChild(dot);
 
-  setTimeout(() => dot.remove(), 400);
+  setTimeout(() => dot.remove(), 300);
 });
 </script>
 
