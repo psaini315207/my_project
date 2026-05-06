@@ -1,14 +1,12 @@
- body {
+ body  body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: white !important;
 
-  /* 🔵 Blue + 🔴 Red Gradient */
-  background: linear-gradient(-45deg, #020617, #1e3a8a, #0ea5e9, #ff0000);
-  background-size: 500% 500%;
+  background: linear-gradient(-45deg, #020617, #1e3a8a, #0ea5e9, #ff0000) !important;
+  background-size: 500% 500% !important;
 
-  /* ⚡ Fast animation */
-  animation: bg 5s ease infinite;
+  animation: bg 5s ease infinite !important;
 }
 
 @keyframes bg {
