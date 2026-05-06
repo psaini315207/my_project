@@ -5,14 +5,135 @@
 <title>Prince Saini Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+
+  background: linear-gradient(-45deg, #020617, #1e3a8a, #0ea5e9, #ff0000);
+  background-size: 400% 400%;
+  animation: bg 6s ease infinite;
+}
+
+@keyframes bg {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+/* NAV */
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+}
+
+.logo {
+  font-size:28px;
+  color:#38bdf8;
+  text-shadow:0 0 10px #38bdf8;
+}
+
+.nav-links {
+  display:flex;
+  list-style:none;
+  gap:20px;
+}
+
+.nav-links a {
+  color:white;
+  text-decoration:none;
+}
+
+/* SECTIONS */
+.section {
+  padding:60px;
+  text-align:center;
+}
+
+/* CARDS */
+.container {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.card {
+  background:rgba(255,255,255,0.1);
+  padding:20px;
+  border-radius:12px;
+  width:220px;
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:scale(1.1);
+}
+
+/* SKILLS */
+.skill {
+  width:300px;
+  margin:10px auto;
+  text-align:left;
+}
+
+.bar {
+  background:#222;
+  border-radius:10px;
+}
+
+.bar span {
+  display:block;
+  height:10px;
+  background:#38bdf8;
+}
+
+/* CONTACT BOX */
+input, textarea {
+  width:250px;
+  padding:10px;
+  margin:5px;
+  border:none;
+  border-radius:5px;
+}
+
+/* TRAIL */
+.trail {
+  position:fixed;
+  width:10px;
+  height:10px;
+  background:#38bdf8;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:9999;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+  color:white;
+  text-decoration:none;
+}
+
+</style>
 </head>
 
 <body>
 
 <!-- NAV -->
 <nav>
-  <h1 class="logo">⚡ Prince.dev</h1>
+  <div class="logo">⚡ Prince.dev</div>
 
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
@@ -24,31 +145,57 @@
 </nav>
 
 <!-- HERO -->
-<section class="section">
+<section class="section" id="home">
   <h1>I’m <span style="color:#38bdf8;">Prince Saini</span></h1>
   <p>BCA Student | DevOps Learner</p>
 </section>
 
 <!-- EDUCATION -->
-<section class="section">
+<section class="section" id="education">
   <h2>Education 🎓</h2>
   <p>✔ 1 Year Diploma Completed in Computer Applications</p>
   <p>✔ BCA Student (Running)</p>
 </section>
 
 <!-- SERVICES -->
-<section class="section">
+<section class="section" id="services">
   <h2>Services 💼</h2>
+
+  <div class="container">
+    <div class="card">📄 Data Entry</div>
+    <div class="card">⌨️ Typing Work</div>
+    <div class="card">📊 Data Management</div>
+    <div class="card">💻 Web Design</div>
+  </div>
 </section>
 
 <!-- SKILLS -->
-<section class="section">
+<section class="section" id="skills">
   <h2>Skills ⚡</h2>
+
+  <div class="skill">
+    <p>HTML</p>
+    <div class="bar"><span style="width:90%"></span></div>
+  </div>
+
+  <div class="skill">
+    <p>CSS</p>
+    <div class="bar"><span style="width:80%"></span></div>
+  </div>
+
+  <div class="skill">
+    <p>Git & GitHub</p>
+    <div class="bar"><span style="width:75%"></span></div>
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section">
+<section class="section" id="contact">
   <h2>Contact 📩</h2>
+
+  <input placeholder="Your Name"><br>
+  <input placeholder="Your Email"><br>
+  <textarea placeholder="Message"></textarea>
 </section>
 
 <!-- WHATSAPP -->
@@ -61,9 +208,10 @@ document.addEventListener("mousemove", e => {
   dot.className = "trail";
   dot.style.left = e.clientX + "px";
   dot.style.top = e.clientY + "px";
+
   document.body.appendChild(dot);
 
-  setTimeout(() => dot.remove(), 500);
+  setTimeout(() => dot.remove(), 400);
 });
 </script>
 
