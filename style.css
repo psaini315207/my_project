@@ -1,18 +1,127 @@
- /* Custom Cursor */
-.cursor {
-  position: fixed;
-  width: 15px;
-  height: 15px;
-  background: #38bdf8;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: transform 0.08s ease;
-  z-index: 9999;
+ body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #9333ea);
+  background-size: 400% 400%;
+  animation: bg 8s ease infinite;
 }
 
-/* Cursor hover effect */
-a:hover ~ .cursor,
-button:hover ~ .cursor {
-  transform: scale(2);
+@keyframes bg {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+.logo {
+  color: #38bdf8;
+  text-shadow: 0 0 10px #38bdf8;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero span {
+  color: #38bdf8;
+  text-shadow: 0 0 15px #38bdf8;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #38bdf8;
+  cursor: pointer;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Cards */
+.project-container, .service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card, .service-card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover, .service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #38bdf8;
+}
+
+/* Skills */
+.skill {
+  width: 300px;
+  margin: auto;
+}
+
+.bar {
+  background: #222;
+  border-radius: 10px;
+}
+
+.bar span {
+  display: block;
+  height: 10px;
+  background: #38bdf8;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: none;
+}
+
+button {
+  background: #38bdf8;
+  border: none;
+  padding: 10px;
 }
