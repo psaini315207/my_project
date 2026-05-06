@@ -125,3 +125,19 @@ button {
   border: none;
   padding: 10px;
 }
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 22px;
+  box-shadow: 0 0 10px #25D366;
+  text-decoration: none;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
