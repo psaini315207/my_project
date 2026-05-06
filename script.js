@@ -1,4 +1,5 @@
- function scrollToSection(id) {
+ alert("JS working");
+function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({
     behavior: "smooth"
   });
