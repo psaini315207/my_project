@@ -4,7 +4,7 @@
   color: white;
   background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #9333ea);
   background-size: 400% 400%;
-  animation: bg 8s ease infinite;
+  animation: bg 4s ease infinite;
 }
 
 @keyframes bg {
