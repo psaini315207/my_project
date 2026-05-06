@@ -21,24 +21,18 @@ nav {
   justify-content: space-between;
   padding: 15px 40px;
 }
-
-.logo {
+ .logo {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 2px;
   color: #38bdf8;
-  text-shadow: 0 0 10px #38bdf8;
-}
 
-nav ul {
-  display: flex;
-  list-style: none;
-}
+  text-shadow: 
+    0 0 10px #38bdf8,
+    0 0 20px #38bdf8,
+    0 0 40px #0ea5e9;
 
-nav li {
-  margin: 0 15px;
-}
-
-nav a {
-  color: 
-  text-decoration: none;
+  transition: 0.3s;
 }
 
 /* Hero */
