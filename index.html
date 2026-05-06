@@ -13,6 +13,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: white;
+  overflow-x: hidden;
 
   background: linear-gradient(-45deg, #020617, #1e3a8a, #0ea5e9, #ff0000);
   background-size: 400% 400%;
@@ -25,33 +26,17 @@ body {
   100% {background-position:0% 50%;}
 }
 
-/* ===== NAVBAR ===== */
+/* ===== NAV ===== */
 nav {
   display:flex;
   justify-content:space-between;
   padding:15px 40px;
-  align-items:center;
 }
 
 .logo {
   font-size:32px;
-  font-weight:bold;
   color:#38bdf8;
   text-shadow:0 0 15px #38bdf8;
-}
-
-/* ===== HERO ===== */
-.hero {
-  height:90vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-}
-
-.hero span {
-  color:#38bdf8;
 }
 
 /* ===== SECTIONS ===== */
@@ -60,7 +45,7 @@ nav {
   text-align:center;
 }
 
-/* ===== GRID ===== */
+/* ===== CARDS ===== */
 .container {
   display:flex;
   flex-wrap:wrap;
@@ -68,20 +53,18 @@ nav {
   gap:20px;
 }
 
-/* ===== CARDS (HOVER EFFECT 🔥) ===== */
 .card {
   background:rgba(255,255,255,0.1);
   padding:20px;
   border-radius:12px;
-  width:200px;
+  width:220px;
   backdrop-filter:blur(10px);
   transition:0.3s;
 }
 
-/* 👇 Cursor effect (hover enlarge) */
 .card:hover {
-  transform:scale(1.15);
-  box-shadow:0 0 25px #38bdf8;
+  transform:scale(1.1);
+  box-shadow:0 0 20px #38bdf8;
 }
 
 /* ===== SKILLS ===== */
@@ -110,12 +93,16 @@ input, textarea {
   border-radius:5px;
 }
 
-button {
-  padding:10px 20px;
-  background:#38bdf8;
-  border:none;
-  cursor:pointer;
-  border-radius:5px;
+/* ===== TRAIL EFFECT ===== */
+.trail {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #38bdf8;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.7;
 }
 
 /* ===== WHATSAPP ===== */
@@ -126,9 +113,8 @@ button {
   background:#25D366;
   padding:15px;
   border-radius:50%;
-  text-decoration:none;
-  font-size:20px;
   color:white;
+  text-decoration:none;
 }
 
 </style>
@@ -136,15 +122,22 @@ button {
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <nav>
   <h1 class="logo">⚡ Prince.dev</h1>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <h1>I’m <span>Prince Saini</span></h1>
+<section class="section">
+  <h1>I’m <span style="color:#38bdf8;">Prince Saini</span></h1>
   <p>BCA Student | DevOps Learner</p>
+</section>
+
+<!-- EDUCATION -->
+<section class="section">
+  <h2>Education 🎓</h2>
+  <p>✔ 1 Year Diploma Completed in Computer Applications</p>
+  <p>✔ BCA Student (Running)</p>
 </section>
 
 <!-- SERVICES -->
@@ -191,15 +184,29 @@ button {
 <section class="section">
   <h2>Contact Me 📩</h2>
 
-  <input type="text" placeholder="Your Name"><br>
-  <input type="email" placeholder="Your Email"><br>
-  <textarea placeholder="Your Message"></textarea><br>
-
-  <button>Send Message</button>
+  <input placeholder="Your Name"><br>
+  <input placeholder="Your Email"><br>
+  <textarea placeholder="Message"></textarea>
 </section>
 
 <!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">💬</a>
+
+<!-- ===== MOUSE TRAIL SCRIPT ===== -->
+<script>
+document.addEventListener("mousemove", function(e){
+  let dot = document.createElement("div");
+  dot.className = "trail";
+  document.body.appendChild(dot);
+
+  dot.style.left = e.clientX + "px";
+  dot.style.top = e.clientY + "px";
+
+  setTimeout(() => {
+    dot.remove();
+  }, 500);
+});
+</script>
 
 </body>
 </html>
