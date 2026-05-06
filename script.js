@@ -1,15 +1,37 @@
- /* Contact Form */
-function sendMessage(e) {
-  e.preventDefault();
-  alert("Your request has been sent 🚀 I will contact you soon!");
+ function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth"
+  });
 }
 
-/* Mouse Cursor Effect */
-const cursor = document.createElement("div");
-cursor.classList.add("cursor");
-document.body.appendChild(cursor);
+function showMessage() {
+  alert("Thanks for visiting my portfolio 🚀");
+}
 
-document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-});
+/* Typing Effect */
+const text = ["DevOps Learner 🚀", "Future Engineer 💻", "Tech Enthusiast 🔥"];
+let i = 0;
+let j = 0;
+let currentText = "";
+let isDeleting = false;
+
+function type() {
+  if (i < text.length) {
+    if (!isDeleting && j <= text[i].length) {
+      currentText = text[i].substring(0, j++);
+    } else if (isDeleting && j >= 0) {
+      currentText = text[i].substring(0, j--);
+    }
+
+    document.getElementById("typing").innerHTML = currentText;
+
+    if (j == text[i].length) isDeleting = true;
+    if (j == 0) {
+      isDeleting = false;
+      i = (i + 1) % text.length;
+    }
+  }
+  setTimeout(type, 100);
+}
+
+type();
