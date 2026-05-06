@@ -1,117 +1,53 @@
- body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #9333ea);
-  background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite;
-}
-
-/* Animated Background */
-@keyframes gradientBG {
-  0% {background-position:0% 50%;}
-  50% {background-position:100% 50%;}
-  100% {background-position:0% 50%;}
-}
-
-/* Navbar */
-nav {
+ /* Services */
+.service-container {
   display: flex;
-  justify-content: space-between;
-  padding: 15px 40px;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #38bdf8;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav li {
-  margin: 0 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #38bdf8;
-}
-
-/* Hero */
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero span {
-  color: #38bdf8;
-}
-
-.hero button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: none;
-  background: #38bdf8;
-  cursor: pointer;
-}
-
-/* Section */
-.section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-/* Cards */
-.project-container {
-  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
-.card {
+.service-card {
   background: rgba(255,255,255,0.1);
   padding: 20px;
+  width: 220px;
   border-radius: 10px;
   backdrop-filter: blur(10px);
   transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-10px);
+.service-card:hover {
+  transform: scale(1.05);
 }
 
-/* Skills */
-.skill {
-  margin: 20px auto;
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 300px;
+  margin: auto;
 }
 
-.bar {
-  background: #222;
-  border-radius: 10px;
+input, textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
-.bar span {
-  display: block;
-  height: 10px;
+button {
+  padding: 10px;
+  border: none;
   background: #38bdf8;
-  border-radius: 10px;
+  cursor: pointer;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
+/* Cursor Effect */
+.cursor {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  background: #38bdf8;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.1s linear;
 }
