@@ -1,61 +1,123 @@
-body {
+ * {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
-  color: white;
 }
 
-/* Wallpaper Background */
-.hero {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1503264116251-35a269479413') no-repeat center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+body {
+  background: #0f172a;
+  color: white;
 }
 
 /* Navbar */
 nav {
-  position: fixed;
-  width: 100%;
-  background: rgba(0,0,0,0.6);
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 15px 40px;
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  width: 100%;
+}
+
+.logo {
+  color: #38bdf8;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
 }
 
 nav a {
-  color: white;
   text-decoration: none;
+  color: white;
+  transition: 0.3s;
 }
 
-/* Sections */
-.section {
-  padding: 50px;
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
   text-align: center;
-  background: #111;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+.hero p {
+  margin: 15px 0;
+}
+
+.hero button {
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero button:hover {
+  background: black;
+  color: white;
+}
+
+/* Section */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Projects */
+.project-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
-  background: #222;
-  margin: 10px;
+  background: #1e293b;
   padding: 20px;
   border-radius: 10px;
-  display: inline-block;
+  width: 250px;
+  transition: 0.3s;
 }
 
-/* Button */
-button {
+.card:hover {
+  transform: scale(1.05);
+  background: #334155;
+}
+
+/* Contact */
+.contact button {
+  margin-top: 15px;
   padding: 10px 20px;
+  background: #38bdf8;
   border: none;
-  background: orange;
-  color: white;
   cursor: pointer;
-  border-radius: 5px;
+}
+
+.contact button:hover {
+  background: white;
+  color: black;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
 }
