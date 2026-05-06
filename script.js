@@ -32,3 +32,17 @@ function type() {
 }
 
 type();
+/* Cursor Trail Effect */
+document.addEventListener("mousemove", function(e) {
+  const trail = document.createElement("div");
+  trail.classList.add("trail");
+
+  document.body.appendChild(trail);
+
+  trail.style.left = e.clientX + "px";
+  trail.style.top = e.clientY + "px";
+
+  setTimeout(() => {
+    trail.remove();
+  }, 500); // trail fade time
+});
