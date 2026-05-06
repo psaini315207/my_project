@@ -1,4 +1,4 @@
-  body {
+ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: white;
@@ -7,62 +7,64 @@
   background-size: 400% 400%;
   animation: bg 6s ease infinite;
 }
+
+@keyframes bg {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+/* NAVBAR */
 nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
 }
 
-/* Navbar */
-   <nav>
-  <h1 class="logo">⚡ Prince.dev</h1>
-
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-/* RIGHT SIDE MENU */
 .nav-links {
-  display: flex !important;
-  list-style: none;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
+  display:flex;
+  list-style:none;
+  gap:20px;
 }
 
-/* LINKS STYLE */
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
+.nav-links a {
+  color:white;
+  text-decoration:none;
 }
 
-.nav-links li a:hover {
-  color: #38bdf8;
-  text-shadow: 0 0 10px #38bdf8;
-}
-
-/* LOGO */
 .logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: #38bdf8;
-  text-shadow: 0 0 10px #38bdf8;
+  font-size:28px;
+  color:#38bdf8;
+  text-shadow:0 0 10px #38bdf8;
 }
-/* WhatsApp */
+
+/* SECTION */
+.section {
+  padding:60px;
+  text-align:center;
+}
+
+/* TRAIL */
+.trail {
+  position:fixed;
+  width:10px;
+  height:10px;
+  background:#38bdf8;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:9999;
+  opacity:0.7;
+}
+
+/* WHATSAPP */
 .whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+  color:white;
+  text-decoration:none;
 }
