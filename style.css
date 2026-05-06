@@ -1,13 +1,12 @@
- body   body {
+  body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: white;
 
   background: linear-gradient(-45deg, #020617, #1e3a8a, #0ea5e9, #ff0000);
-  background-size: 500% 500%;
+  background-size: 400% 400%;
   animation: bg 6s ease infinite;
 }
-
 nav {
   width: 100%;
   display: flex;
