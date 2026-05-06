@@ -9,12 +9,23 @@
 }
 
 /* Navbar */
-nav {
+ nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 40px;
 }
 
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
 /* Logo */
 .logo {
   font-size: 32px;
