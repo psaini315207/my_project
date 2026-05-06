@@ -27,18 +27,32 @@ body {
 }
 
 /* ===== NAV ===== */
-  <nav>
-  <h1 class="logo">⚡ Prince.dev</h1>
+  <nav style="
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  width:100%;
+  box-sizing:border-box;
+">
+  <h1 style="color:#38bdf8; text-shadow:0 0 10px #38bdf8;">
+    ⚡ Prince.dev
+  </h1>
 
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
+  <ul style="
+    display:flex;
+    list-style:none;
+    gap:25px;
+    margin:0;
+    padding:0;
+  ">
+    <li><a href="#home" style="color:white;text-decoration:none;">Home</a></li>
+    <li><a href="#services" style="color:white;text-decoration:none;">Services</a></li>
+    <li><a href="#education" style="color:white;text-decoration:none;">Education</a></li>
+    <li><a href="#skills" style="color:white;text-decoration:none;">Skills</a></li>
+    <li><a href="#contact" style="color:white;text-decoration:none;">Contact</a></li>
   </ul>
 </nav>
-
 .logo {
   font-size:32px;
   color:#38bdf8;
