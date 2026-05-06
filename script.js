@@ -33,17 +33,24 @@ function type() {
 }
 
 type();
-/* Cursor Trail Effect */
-document.addEventListener("mousemove", function(e) {
-  const trail = document.createElement("div");
-  trail.classList.add("trail");
+ /* Smooth Cursor Trail */
+const trails = [];
 
-  document.body.appendChild(trail);
+for (let i = 0; i < 15; i++) {
+  const div = document.createElement("div");
+  div.className = "trail";
+  document.body.appendChild(div);
+  trails.push(div);
+}
 
-  trail.style.left = e.clientX + "px";
-  trail.style.top = e.clientY + "px";
+document.addEventListener("mousemove", (e) => {
+  let x = e.clientX;
+  let y = e.clientY;
 
-  setTimeout(() => {
-    trail.remove();
-  }, 500); // trail fade time
+  trails.forEach((trail, index) => {
+    setTimeout(() => {
+      trail.style.left = x + "px";
+      trail.style.top = y + "px";
+    }, index * 20);
+  });
 });
