@@ -1,12 +1,17 @@
- * {
+ body {
   margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #9333ea);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
 }
 
-body {
-  background: #0f172a;
-  color: white;
+/* Animated Background */
+@keyframes gradientBG {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
 }
 
 /* Navbar */
@@ -14,12 +19,11 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 15px 40px;
-  background: rgba(0,0,0,0.5);
-  position: fixed;
-  width: 100%;
 }
 
 .logo {
+  font-size: 22px;
+  font-weight: bold;
   color: #38bdf8;
 }
 
@@ -28,14 +32,13 @@ nav ul {
   list-style: none;
 }
 
-nav ul li {
+nav li {
   margin: 0 15px;
 }
 
 nav a {
-  text-decoration: none;
   color: white;
-  transition: 0.3s;
+  text-decoration: none;
 }
 
 nav a:hover {
@@ -48,30 +51,19 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
   text-align: center;
 }
 
-.hero h1 {
-  font-size: 50px;
-}
-
-.hero p {
-  margin: 15px 0;
+.hero span {
+  color: #38bdf8;
 }
 
 .hero button {
+  margin-top: 20px;
   padding: 10px 20px;
   border: none;
-  background: white;
-  color: black;
+  background: #38bdf8;
   cursor: pointer;
-  border-radius: 5px;
-}
-
-.hero button:hover {
-  background: black;
-  color: white;
 }
 
 /* Section */
@@ -80,44 +72,46 @@ nav a:hover {
   text-align: center;
 }
 
-/* Projects */
+/* Cards */
 .project-container {
   display: flex;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .card {
-  background: #1e293b;
+  background: rgba(255,255,255,0.1);
   padding: 20px;
   border-radius: 10px;
-  width: 250px;
+  backdrop-filter: blur(10px);
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.05);
-  background: #334155;
+  transform: translateY(-10px);
 }
 
-/* Contact */
-.contact button {
-  margin-top: 15px;
-  padding: 10px 20px;
+/* Skills */
+.skill {
+  margin: 20px auto;
+  width: 300px;
+}
+
+.bar {
+  background: #222;
+  border-radius: 10px;
+}
+
+.bar span {
+  display: block;
+  height: 10px;
   background: #38bdf8;
-  border: none;
-  cursor: pointer;
-}
-
-.contact button:hover {
-  background: white;
-  color: black;
+  border-radius: 10px;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: black;
 }
