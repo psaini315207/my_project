@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,43 +7,61 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <h2>Prince Saini</h2>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<!-- Navbar -->
+<nav>
+  <h2 class="logo">Prince Saini</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h1>Welcome to Prince Saini</h1>
-    <p>BCA Student | DevOps Learner</p>
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Hi, I'm Prince 👋</h1>
+    <p>BCA Student | DevOps Learner 🚀</p>
     <button onclick="scrollToSection('projects')">View Projects</button>
-  </section>
+  </div>
+</section>
 
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <h2>My Projects</h2>
+<!-- Projects -->
+<section id="projects" class="section">
+  <h2>My Projects</h2>
+
+  <div class="project-container">
+
     <div class="card">
-      <h3>Project 1</h3>
-      <p>Coming soon...</p>
+      <h3>Auto Backup System</h3>
+      <p>Backup files & push to GitHub automatically</p>
     </div>
+
     <div class="card">
-      <h3>Project 2</h3>
-      <p>Coming soon...</p>
+      <h3>Portfolio Website</h3>
+      <p>Personal website using HTML, CSS, JS</p>
     </div>
-  </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <p>Email: your@email.com</p>
-    <button onclick="showMessage()">Say Hello</button>
-  </section>
+    <div class="card">
+      <h3>Coming Soon</h3>
+      <p>More projects loading...</p>
+    </div>
 
-  <script src="script.js"></script>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section contact">
+  <h2>Contact Me</h2>
+  <p>Email: prince@example.com</p>
+  <button onclick="showMessage()">Say Hello 👋</button>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 Prince Saini | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
