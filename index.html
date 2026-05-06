@@ -207,6 +207,20 @@ document.addEventListener("mousemove", function(e){
   }, 500);
 });
 </script>
+<script>
+document.addEventListener("mousemove", function(e){
+  let dot = document.createElement("div");
+  dot.className = "trail";
 
+  dot.style.left = e.clientX + "px";
+  dot.style.top = e.clientY + "px";
+
+  document.body.appendChild(dot);
+
+  setTimeout(() => {
+    dot.remove();
+  }, 500);
+});
+</script>
 </body>
 </html>
