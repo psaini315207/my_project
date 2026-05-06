@@ -1,10 +1,11 @@
- body {
+ body  body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: white;
-  background:  background: linear-gradient(-45deg, #000000, #1e3a8a, #0ea5e9, #ff0000);
+
+  background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #9333ea);
   background-size: 400% 400%;
-  animation: bg 4s ease infinite;
+  animation: bg 8s ease infinite;
 }
 
 @keyframes bg {
