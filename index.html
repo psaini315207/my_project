@@ -3,96 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <title>Prince Saini | DevOps Portfolio</title>
-  <link rel="stylesheet" href="style.css">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      cursor: none; /* Hide default cursor */
+    }
+
+    /* Custom Cursor */
+    .cursor {
+      position: fixed;
+      width: 15px;
+      height: 15px;
+      background: #38bdf8;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background: #111;
+      color: white;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+      color: white;
+      text-align: center;
+    }
+
+    .section {
+      padding: 50px;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
+
+<div class="cursor"></div>
 
 <!-- Navbar -->
 <nav>
-  <h2 class="logo">⚡ Prince.dev</h2>
+  <h2>⚡ Prince.dev</h2>
   <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Contact</a></li>
   </ul>
 </nav>
 
 <!-- Hero -->
-<section id="home" class="hero">
-  <div class="hero-content">
-    <h1>I’m <span>Prince Saini</span></h1>
-    <p id="typing"></p>
-    <button onclick="scrollToSection('projects')">🚀 View My Work</button>
+<section class="hero">
+  <div>
+    <h1>I’m Prince Saini</h1>
+    <p>DevOps Learner 🚀</p>
   </div>
 </section>
 
-<!-- About -->
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <p>I am a BCA student passionate about DevOps, automation, and cloud technologies. I love building real-world projects.</p>
-</section>
-
-<!-- Projects -->
-<section id="projects" class="section">
+<!-- Section -->
+<section class="section">
   <h2>My Projects</h2>
-  <div class="project-container">
-
-    <div class="card">
-      <h3>Auto Backup System</h3>
-      <p>Automated file backup with GitHub integration</p>
-    </div>
-
-    <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>Modern responsive portfolio design</p>
-    </div>
-
-    <div class="card">
-      <h3>Coming Soon</h3>
-      <p>More exciting projects...</p>
-    </div>
-
-  </div>
+  <p>Coming Soon...</p>
 </section>
 
-<!-- Skills -->
-<section id="skills" class="section">
-  <h2>My Skills</h2>
+<script>
+  const cursor = document.querySelector(".cursor");
 
-  <div class="skill">
-    <p>HTML</p>
-    <div class="bar"><span style="width:90%"></span></div>
-  </div>
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
+</script>
 
-  <div class="skill">
-    <p>CSS</p>
-    <div class="bar"><span style="width:80%"></span></div>
-  </div>
-
-  <div class="skill">
-    <p>Git & GitHub</p>
-    <div class="bar"><span style="width:75%"></span></div>
-  </div>
-
-</section>
-
-<!-- Contact -->
-<section id="contact" class="section contact">
-  <h2>Contact Me</h2>
-  <p>Email: prince@example.com</p>
-  <button onclick="showMessage()">Say Hello 👋</button>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>✨ Built by Prince Saini | 2026</p>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
