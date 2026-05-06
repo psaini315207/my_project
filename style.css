@@ -1,4 +1,4 @@
- body  body {
+ body   body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: white;
@@ -8,8 +8,7 @@
   animation: bg 6s ease infinite;
 }
 
-/* Navbar */
-   nav {
+nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -17,6 +16,18 @@
   padding: 15px 40px;
 }
 
+/* Navbar */
+   <nav>
+  <h1 class="logo">⚡ Prince.dev</h1>
+
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 /* RIGHT SIDE MENU */
 .nav-links {
   display: flex !important;
