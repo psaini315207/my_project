@@ -56,7 +56,12 @@ nav {
   z-index:9999;
   opacity:0.7;
 }
-
+#clock{
+  font-size:28px;
+  margin-top:20px;
+  color:#38bdf8;
+  text-shadow:0 0 10px #38bdf8;
+}
 /* WHATSAPP */
 .whatsapp {
   position:fixed;
