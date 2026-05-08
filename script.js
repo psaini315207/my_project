@@ -54,3 +54,34 @@ document.addEventListener("mousemove", (e) => {
     }, index * 20);
   });
 });
+<script>
+
+document.addEventListener("mousemove", e => {
+
+  let dot = document.createElement("div");
+
+  dot.className = "trail";
+
+  dot.style.left = e.clientX + "px";
+
+  dot.style.top = e.clientY + "px";
+
+  document.body.appendChild(dot);
+
+  setTimeout(() => dot.remove(), 300);
+
+});
+
+
+/* CLOCK */
+
+setInterval(() => {
+
+  const now = new Date();
+
+  document.getElementById("clock").innerHTML =
+  now.toLocaleTimeString();
+
+}, 1000);
+
+</script>
