@@ -75,13 +75,15 @@ document.addEventListener("mousemove", e => {
 
 /* CLOCK */
 
-setInterval(() => {
+ function updateClock() {
 
   const now = new Date();
 
-  document.getElementById("clock").innerHTML =
-  now.toLocaleTimeString();
+  const time = now.toLocaleTimeString();
 
-}, 1000);
+  document.getElementById("clock").innerHTML = time;
+}
 
-</script>
+updateClock();
+
+setInterval(updateClock, 1000);
